@@ -1,0 +1,30 @@
+.cabecalhoPrincipal .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.cabecalhoPrincipal-nav {
+  display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 5%;
+  width: 70%;
+}
+
+.rodapePrincipal-contatoForm {
+  width: 25%
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+  display: flex; /* deixa os elementos do form com a mesma altura corrigido o problema do botao */
+}
