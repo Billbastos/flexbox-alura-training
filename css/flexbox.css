@@ -1,30 +1,76 @@
+/* --------- */
+/* CABECALHO */
+/* --------- */
 .cabecalhoPrincipal .container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* centraliza os filhos horizontalmente */
+  justify-content: space-between; /* alinhamento dos itens |item   |   item   |   ...| */
 }
 
-.cabecalhoPrincipal-nav {
-  display: flex;
-}
+	.cabecalhoPrincipal-nav {
+		display: flex;
+	}
 
+/* ------ */
+/* RODAPE */
+/* ------ */
 .rodapePrincipal-patrocinadores .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* alinhamento dos itens |item    |item    |...    | */
 }
 
-.rodapePrincipal-patrocinadores-list {
+	/* LISTA DE PATROCINADORES */
+	.rodapePrincipal-patrocinadores-list {
+		display: flex;
+		align-items: center; /* centraliza os filhos horizontalmente */
+		justify-content: space-around;  /* alinhamento dos itens |  item  |  item  |  ...  | */
+		margin-right: 5%;
+		width: 70%;
+	}
+
+	/* ENTRE EM CONTATO CONTAINER */
+	.rodapePrincipal-contatoForm {
+		width: 25%
+	}
+
+	/* ENTRE EM CONTATO FORM */
+	.rodapePrincipal-contatoForm-fieldset {
+		display: flex; /* Deixa os elementos do form com a mesma altura corrigido o problema do botao */
+	}
+
+/* -------------- */
+/* MAPA DE CURSOS */
+/* -------------- */
+.rodapePrincipal-navMap-list {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-right: 5%;
-  width: 70%;
+
+  /* flex-direction: column; */   /* Posiciona os itens um embaixo do outro ao invés do padrão row um ao lado do outro */
+  /* flex-wrap: wrap;        */   /* Faz a quebra wrap de acordo com a altura do elemento pai 250px */
+  
+  flex-flow: column wrap; /* tem o mesmo efeito das propriedades flex-direction + flex-wrap */
+  
+  height: 250px; /* Define-se a altura do pai baseado na altura do maior filho */
 }
 
-.rodapePrincipal-contatoForm {
-  width: 25%
+/* ------------- */
+/* NOSSOS CURSOS */
+/* ------------- */
+
+/* CRIANDO UM GRID FLEXBOX */
+.conteudoPrincipal-cursos {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.rodapePrincipal-contatoForm-fieldset {
-  display: flex; /* deixa os elementos do form com a mesma altura corrigido o problema do botao */
-}
+	.conteudoPrincipal-cursos-link {
+		width: 23%;
+		margin: 1%; /* 1% margin esquerda + 1% margin direita = 25% total width */
+	}
+
+	.conteudoPrincipal-cursos-link:nth-child(4n) { /* Manipula todos os li multiplos de 4 */
+		margin-right: 0;
+	}
+
+	.conteudoPrincipal-cursos-link:nth-child(4n+1) { /* Manipula todos os li multiplos de 4 + 1 */
+		margin-left: 0;
+	}
