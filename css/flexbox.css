@@ -74,3 +74,81 @@
 	.conteudoPrincipal-cursos-link:nth-child(4n+1) { /* Manipula todos os li multiplos de 4 + 1 */
 		margin-left: 0;
 	}
+
+/* ----------------- */	
+/* VIDEO E VANTAGENS */
+/* ----------------- */
+.videoSobre .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.videoSobre-sobre {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2; /* cresce o item distribuindo o espaco do container flex crescendo ate o tamanhoda pagina */
+}
+
+.videoSobre-sobre-list {
+	flex-grow: 1;
+}
+
+.videoSobre-video {
+	flex-grow: 1;
+}
+
+/* ------------- */
+/* 		MOBILE		 */
+/* ------------- */
+@media(max-width: 768px){ /* Aplica os estilos para devices com tela de no max 768px */
+	
+	/* CABECALHO */
+	.cabecalhoPrincipal .container {
+		flex-direction: column; /* Quanto muda o flex direction o main axis passa a ser o cross axis e as propriedades align-itens e justify-container mudam a direcao */
+		align-items: initial;
+		text-align: center;
+	}
+	
+	.cabecalhoPrincipal-nav {
+		flex-direction: column;
+	}
+	
+	/* CONTEUDO */
+	.conteudoPrincipal-cursos {
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal-cursos-link {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	/* RODAPE NAV LIST */
+	.rodapePrincipal-navMap-list {
+		height: auto;
+	}
+
+	/* PATROCINADORES */
+	.rodapePrincipal-patrocinadores .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.rodapePrincipal-contatoForm {
+		width: 100%;
+	}
+
+	.rodapePrincipal-patrocinadores-list {
+		width: 100%;
+		margin: 0;
+	}
+	
+	.rodapePrincipal-contatoForm-fieldset {
+		justify-content: center;
+	}
+
+	.cabecalhoPrincipal-nav-link-app {
+		order: -1; /* coloca o filho Nosso App em primeiro lugar da lista */
+	}
+}
